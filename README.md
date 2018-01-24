@@ -1,12 +1,11 @@
-# drawhelper-with-cesium-v1.41
-1ã€åœ¨åŸhttps://github.com/leforthomas/cesium-drawhelperåŸºç¡€ä¸Šï¼Œä¿®æ”¹äº†DrawHelper.jséƒ¨åˆ†åœ°æ–¹ï¼Œä»è€Œèƒ½å¤Ÿæ”¯æŒæœ€æ–°çš„cesium v1.41ï¼Œå…·ä½“ä¿®æ”¹è¯´æ˜å¦‚ä¸‹ï¼š
+1¡¢ÔÚÔ­https://github.com/leforthomas/cesium-drawhelper»ù´¡ÉÏ£¬ĞŞ¸ÄÁËDrawHelper.js²¿·ÖµØ·½£¬´Ó¶øÄÜ¹»Ö§³Ö×îĞÂµÄcesium v1.41£¬¾ßÌåĞŞ¸ÄËµÃ÷ÈçÏÂ£º
 
-2ã€294è¡Œ
+2¡¢294ĞĞ
 	lineWidth: Math.min(this.strokeWidth || 4.0, context._aliasedLineWidthRange[1])
-æ”¹ä¸º:
+¸ÄÎª:
 	lineWidth: 1.0
 
-3ã€977è¡Œå¼€å§‹
+3¡¢977ĞĞ¿ªÊ¼
 	function updateExtent(value) {
         if (extent == null) {
             extent = new Cesium.RectanglePrimitive();
@@ -62,7 +61,7 @@
     }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
   }
 
-æ›¿æ¢ä¸ºï¼š
+Ìæ»»Îª£º
     // Now wait for start
     mouseHandler.setInputAction(function (movement) {
         if (movement.position != null) {
@@ -79,6 +78,7 @@
                     });
                     primitives.add(extent);
                     markers = new _.BillboardGroup(_self, defaultBillboard);
+					var corners = getExtentCorners(value);
                     markers.addBillboards(corners);
                 } else {
                     _self.stopDrawing();
@@ -100,6 +100,7 @@
                 if (cartesian) {
                     var value = getExtent(firstPoint, ellipsoid.cartesianToCartographic(cartesian));
                     extent.setExtent(value);
+					var corners = getExtentCorners(value);
                     markers.updateBillboardsPositions(corners);
                     tooltip.showAt(position, "<p>Drag to change rectangle extent</p><p>Click again to finish drawing</p>");
                 }
