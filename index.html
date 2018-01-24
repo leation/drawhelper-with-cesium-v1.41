@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="utf-8">
+    <title>drawhelper-with-cesium-v1.41</title>
+    <meta name="description" content="cesium标绘功能">
+    <meta name="author" content="李仙伟, 武汉圣韦合众信息技术有限公司, www.swhztech.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="lib/cesium-1.41/Widgets/widgets.css" rel="stylesheet" />
+    <link href="DrawHelper.css" rel="stylesheet" />
+    <style>
+        html, body, #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .cesium-viewer-bottom {
+            display: none;
+        }
+
+        #toolbar {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            display: inline;
+            margin: 10px;
+            padding: 0px;
+            background: white;
+        }
+
+        #logging {
+            position: absolute;
+            bottom: 0px;
+            right: 0;
+            display: inline;
+            margin: 10px;
+            padding: 10px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="cesiumContainer">
+    </div>
+    <div id="toolbar">
+    </div>
+    <div id="logging">
+    </div>
+    <script src="lib/cesium-1.41/Cesium.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="DrawHelper.js?v=1.01"></script>
+    <script src="index.js?v=1.01"></script>
+</body>
+</html>
