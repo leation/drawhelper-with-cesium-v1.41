@@ -1,4 +1,4 @@
-1、在原<a href="https://github.com/leforthomas/cesium-drawhelper">cesium-drawhelper</a>基础上，修改了DrawHelper.js部分地方，从而能够支持最新的cesium v1.41，具体修改说明如下：
+1、在原<a href="https://github.com/leforthomas/cesium-drawhelper" target="_blank">cesium-drawhelper</a>基础上，修改了DrawHelper.js部分地方，从而能够支持最新的cesium v1.41，具体修改说明如下：
 <br/>
 2、294行
 <br/>
