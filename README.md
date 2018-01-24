@@ -1,11 +1,16 @@
 1、在原https://github.com/leforthomas/cesium-drawhelper基础上，修改了DrawHelper.js部分地方，从而能够支持最新的cesium v1.41，具体修改说明如下：
-
+<br/>
 2、294行
+<br/>
 	lineWidth: Math.min(this.strokeWidth || 4.0, context._aliasedLineWidthRange[1])
 改为:
+<br/>
 	lineWidth: 1.0
 
 3、977行开始
+<br/>
+<pre>  
+  <code class="tex">
 	function updateExtent(value) {
         if (extent == null) {
             extent = new Cesium.RectanglePrimitive();
@@ -60,8 +65,12 @@
         }
     }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
   }
+  </code>  
+</pre>
 
 替换为：
+<pre>  
+  <code class="tex">
     // Now wait for start
     mouseHandler.setInputAction(function (movement) {
         if (movement.position != null) {
@@ -108,3 +117,5 @@
         }
     }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
 }
+  </code>  
+</pre>
