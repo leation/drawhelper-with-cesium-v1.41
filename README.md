@@ -3,14 +3,14 @@
 2、294行
 <br/>
 	lineWidth: Math.min(this.strokeWidth || 4.0, context._aliasedLineWidthRange[1])
+	<br/>
 改为:
 <br/>
 	lineWidth: 1.0
-
+<br/>
 3、977行开始
 <br/>
 <pre>  
-  <code class="tex">
 	function updateExtent(value) {
         if (extent == null) {
             extent = new Cesium.RectanglePrimitive();
@@ -65,12 +65,11 @@
         }
     }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
   }
-  </code>  
 </pre>
-
+<br/>
 替换为：
+<br/>
 <pre>  
-  <code class="tex">
     // Now wait for start
     mouseHandler.setInputAction(function (movement) {
         if (movement.position != null) {
@@ -117,5 +116,4 @@
         }
     }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
 }
-  </code>  
 </pre>
