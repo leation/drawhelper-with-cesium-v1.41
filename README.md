@@ -78,7 +78,7 @@
                     });
                     primitives.add(extent);
                     markers = new _.BillboardGroup(_self, defaultBillboard);
-					var corners = getExtentCorners(value);
+		    var corners = getExtentCorners(value);
                     markers.addBillboards(corners);
                 } else {
                     _self.stopDrawing();
@@ -100,7 +100,7 @@
                 if (cartesian) {
                     var value = getExtent(firstPoint, ellipsoid.cartesianToCartographic(cartesian));
                     extent.setExtent(value);
-					var corners = getExtentCorners(value);
+		    var corners = getExtentCorners(value);
                     markers.updateBillboardsPositions(corners);
                     tooltip.showAt(position, "<p>Drag to change rectangle extent</p><p>Click again to finish drawing</p>");
                 }
